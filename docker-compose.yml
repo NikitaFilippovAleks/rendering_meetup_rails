@@ -1,0 +1,27 @@
+services:
+  app:
+    build: 
+      dockerfile: ./Dockerfile
+      context: .
+    command: sleep infinity
+    restart: always
+    ports:
+      - ${BACKEND_PORT_EXTERNAL}:3000
+    env_file: .env
+    volumes:
+      - .:/app:cached
+      - solargraph:/root/.solargraph
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16.3
+    restart: always
+    volumes:
+    - pg_data:/var/lib/postgresql/data
+    env_file: .env
+
+volumes:
+  pg_data:
+  rails_logs:
+  solargraph:

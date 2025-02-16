@@ -1,0 +1,39 @@
+{
+  "name": "rendering_meetup_rails",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "ruby": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "vscode": {
+      "extensions": [
+        "koichisasada.vscode-rdbg",
+        "castwide.solargraph",
+        "misogi.ruby-rubocop",
+        "hoovercj.ruby-linter",
+        "miguel-savignano.ruby-symbols",
+        "SarahRidge.vscode-ruby-syntax",
+        "kaiwood.endwise",
+        "cweijan.vscode-database-client2",
+        "dbaeumer.vscode-eslint",
+        "naumovs.color-highlight",
+        "mikestead.dotenv",
+        "eamodio.gitlens",
+        "firsttris.vscode-jest-runner",
+        "stylelint.vscode-stylelint",
+        "SimonSiefke.svg-preview",
+        "wayou.vscode-todo-highlight"
+      ],
+      "settings": {
+        "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
+        "solargraph.bundlerPath": "/usr/local/bin/bundle",
+        "ruby.rubocop.executePath": "/usr/local/bundle/bin/",
+        "ruby.linter.executablePath": "/usr/local/bundle/bin/"
+      }
+    }
+  }
+}
