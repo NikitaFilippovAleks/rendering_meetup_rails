@@ -1,0 +1,23 @@
+<div class='column'>
+  <h1>Products</h1>
+
+  <button>
+    <%= link_to "New product", new_product_path %>
+  </button>
+
+  <div id="products">
+    <% @products.each do |product| %>
+      <div class='product'>
+        <div class='product_data'>
+          <div>
+            Name: <%= link_to product.name, product %>
+          </div>
+
+          <span>Category: <%= product.category%></span>
+        </div>
+
+        <%= button_to "Delete", product, method: :delete %>
+      </div>
+    <% end %>
+  </div>
+</div>

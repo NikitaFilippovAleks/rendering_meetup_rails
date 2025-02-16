@@ -1,0 +1,21 @@
+<div class='column'>
+  <h1>New product</h1>
+
+  <%= form_with model: @product, html: { class: "column" } do |form| %>
+    <div class='column'>
+      <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div>
+        <%= form.label :category %>
+        <%= form.text_field :category %>
+      </div>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
