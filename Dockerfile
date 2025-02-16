@@ -15,5 +15,5 @@ RUN curl -fsSL https://deb.nodesource.com/setup_$NODE_VERSION | bash - \
 		postgresql-client \
 		yarn \
 		apt-transport-https \
-		# && yarn install --check-files \
-		# && bundle check || bundle install --jobs 4
+		&& yarn install --check-files \
+		&& bundle check || bundle install --jobs 4

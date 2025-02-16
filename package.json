@@ -1,0 +1,11 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:NikitaFilippovAleks/rendering_meetup_rails.git",
+  "author": "Nikita Filippov <nikita.filippov.aleks@mail.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "@hotwired/turbo-rails": "^8.0.12"
+  }
+}

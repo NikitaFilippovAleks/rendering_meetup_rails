@@ -1,0 +1,12 @@
+<div class='column'>
+  <h1>Counter</h1>
+
+  <%= turbo_frame_tag "counter" do %>
+    <%= render "counters/counter", count: @count %>
+  <% end %>
+
+  <div class='counter_buttons'>
+    <%= button_to "-", decrement_counter_path, method: :patch, data: { turbo_frame: "counter" }, html: { id: 'minus-btn' } %>
+    <%= button_to "+", increment_counter_path, method: :patch, data: { turbo_frame: "counter" }, html: { id: 'plus-btn' } %>
+  </div>
+</div>
