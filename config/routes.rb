@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get "/counter", to: "counter#index"
 
   # Defines the root path route ("/")
-  root "home#index"
+  root to: 'application#react_page'
 end

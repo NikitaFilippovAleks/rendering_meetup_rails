@@ -1,0 +1,38 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:NikitaFilippovAleks/rendering_meetup_rails.git",
+  "author": "Nikita Filippov <nikita.filippov.aleks@mail.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.4",
+    "@mui/material": "^6.4.4",
+    "@svgr/webpack": "^8.1.0",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "6.27.0",
+    "ts-loader": "^9.5.2",
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
+    "webpack": "^5.98.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.22.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:dev": "webpack --mode=development --watch"
+  }
+}
