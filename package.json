@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:NikitaFilippovAleks/rendering_meetup_rails.git",
+  "author": "Nikita Filippov <nikita.filippov.aleks@mail.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "@inertiajs/inertia": "^0.11.1",
+    "@inertiajs/inertia-react": "^0.8.1",
+    "@inertiajs/progress": "^0.2.7",
+    "@inertiajs/react": "^2.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^6.1.0",
+    "vite-plugin-ruby": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^19.0.4"
+  }
+}

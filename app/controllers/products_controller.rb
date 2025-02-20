@@ -3,13 +3,20 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+
+    render inertia: 'Products', props: {
+      products: @products
+    }
   end
 
   def show
+    render inertia: 'ProductsShow', props: {
+      product: @product
+    }
   end
 
   def new
-    @product = Product.new
+    render inertia: 'ProductsNew', props: {}
   end
 
   def create

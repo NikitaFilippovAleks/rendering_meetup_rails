@@ -1,5 +1,5 @@
 services:
-  app:
+  app: &backend
     build: 
       dockerfile: ./Dockerfile
       context: .
@@ -8,6 +8,8 @@ services:
     ports:
       - ${BACKEND_PORT_EXTERNAL}:3000
     env_file: .env
+    environment:
+      VITE_RUBY_HOST: vite
     volumes:
       - .:/app:cached
       - solargraph:/root/.solargraph
@@ -20,6 +22,14 @@ services:
     volumes:
     - pg_data:/var/lib/postgresql/data
     env_file: .env
+  
+  vite:
+    <<: *backend
+    command: sleep infinity
+    environment:
+      VITE_RUBY_HOST: 0.0.0.0
+    ports:
+      - 3036:3036
 
 volumes:
   pg_data:
